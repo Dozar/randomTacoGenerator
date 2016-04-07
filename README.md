@@ -1,2 +1,2 @@
-# randomTacoGenerator
-Written in java with a taco api to provide random tacos. 
+# Recipe Book
+Written in java with a recipe API to find recipes based on ingredients.
