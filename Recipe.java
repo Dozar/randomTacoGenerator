@@ -10,7 +10,7 @@ package recipesearch;
  * @author Dozar
  */
 public class Recipe {
-        private int id;
+  private int id;
 	private String title, link;
 
     Recipe(){
