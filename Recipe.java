@@ -37,6 +37,6 @@ public class Recipe {
         link = linkPut;
     }
     public String toString() {
-        return "Title: " + getTitle() + "\nLink: " + getLink() + "\n\n";
+       return "Title: " + getTitle() + "`Link: " + getLink() + "``";
     }
 }

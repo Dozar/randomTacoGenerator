@@ -34,9 +34,10 @@ public class RecipeClient {
 						String line = "", response = "";
 
 						line = br.readLine();
-						while(line != null){
-							response += line;
-							line = br.readLine();
+						String[] recipes = line.split("`");
+						for (String recipe : recipes) {
+							response += recipe;
+							response += "\n";
 						}
 
 						System.out.println("Server response:\n\n" + response);
