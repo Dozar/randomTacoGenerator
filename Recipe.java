@@ -24,7 +24,7 @@ public class Recipe {
         link = newLink;
     }
 
-    int getID(){
+    int getId(){
         return id;
     }
     String getTitle(){
