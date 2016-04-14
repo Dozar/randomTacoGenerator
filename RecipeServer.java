@@ -216,7 +216,7 @@ public class RecipeServer {
     String recipeUrl = null;
     try {
       JSONObject recipeJson = new JSONObject(recipeJsonStr);
-      recipeUrl = recipeJson.getString("source_url");
+      recipeUrl = recipeJson.getString("sourceUrl");
     }
     catch (JSONException e) {
       System.out.println(e.getMessage());
