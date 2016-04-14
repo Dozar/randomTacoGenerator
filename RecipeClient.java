@@ -24,7 +24,7 @@ public class RecipeClient {
 				 Scanner scanner = new Scanner(System.in);
 
 				 while (true) {
-					 System.out.print("Enter three ingredients and number of recipes to return (w,x,y,z):  ");
+					 System.out.print("Enter term to search, number of recipes to return, and number of recipes to skip (burger,10,5):  ");
 					 String inputLine = scanner.nextLine();
 						if ("quit".equalsIgnoreCase(inputLine)) {
 							break;
