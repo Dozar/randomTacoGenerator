@@ -70,6 +70,11 @@ public class RecipeServer {
         Recipe[] recipes = new Recipe[numRecipes];
         recipes = parseData(recipeJsonStr, numRecipes);
 
+        for (Recipe recipe : recipes) {
+          recipeJsonStr = fetchData(recipe.getId());
+          recipe.setLink(parseData(recipeJsonStr));
+        }
+
         String outputLine = "";
         for (Recipe recipe : recipes) {
           outputLine += recipe.toString();
@@ -131,7 +136,7 @@ public class RecipeServer {
     return recipeJsonStr;
   }
 
-  public static String fetchData(String foodId) {
+  public static String fetchData(int foodId) {
 
     HttpURLConnection conn = null;
     BufferedReader reader = null;
@@ -189,7 +194,7 @@ public class RecipeServer {
 
       for (int i = 0; i < numRecipes; i++) {
 
-        int id;
+        int id = 0;
         String title, link = "";
 
         JSONObject recipeObject = (JSONObject) recipeArray.get(i);
@@ -216,5 +221,6 @@ public class RecipeServer {
     catch (JSONException e) {
       System.out.println(e.getMessage());
     }
-    return recipes;
+    return recipeUrl;
   }
+}
