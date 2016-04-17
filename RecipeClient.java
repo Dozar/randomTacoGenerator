@@ -24,7 +24,7 @@ public class RecipeClient {
 				 Scanner scanner = new Scanner(System.in);
 
 				 while (true) {
-					 System.out.print("Enter three ingredients and number of recipes to return (w,x,y,z):  ");
+					 System.out.print("Enter term to search, number of recipes to return, and number of recipes to skip (burger,10,5):  ");
 					 String inputLine = scanner.nextLine();
 						if ("quit".equalsIgnoreCase(inputLine)) {
 							break;
@@ -34,9 +34,10 @@ public class RecipeClient {
 						String line = "", response = "";
 
 						line = br.readLine();
-						while(line != null){
-							response += line;
-							line = br.readLine();
+						String[] recipes = line.split("`");
+						for (String recipe : recipes) {
+							response += recipe;
+							response += "\n";
 						}
 
 						System.out.println("Server response:\n\n" + response);

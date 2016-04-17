@@ -10,7 +10,7 @@ package recipesearch;
  * @author Dozar
  */
 public class Recipe {
-        private int id;
+  private int id;
 	private String title, link;
 
     Recipe(){
@@ -24,7 +24,7 @@ public class Recipe {
         link = newLink;
     }
 
-    int getID(){
+    int getId(){
         return id;
     }
     String getTitle(){
@@ -37,6 +37,6 @@ public class Recipe {
         link = linkPut;
     }
     public String toString() {
-        return "Title: " + getTitle() + "\nLink: " + getLink() + "\n\n";
+       return "Title: " + getTitle() + "`Link: " + getLink() + "``";
     }
 }
